@@ -18,13 +18,13 @@ var marker = new ol.Feature({
   ),  // Coordinates of Matjiesfontein
 });
 
-marker.setStyle(new ol.style.Style({
-  image: new ol.style.Icon( ({
-    color: '#ffcd46',
-    crossOrigin: 'anonymous',
-    src: 'dot.png'
-  }))
-}));
+//marker.setStyle(new ol.style.Style({
+//  image: new ol.style.Icon( ({
+//    color: '#ffcd46',
+//    crossOrigin: 'anonymous',
+//    src: 'dot.png'
+//  }))
+//}));
 
 var vectorSource = new ol.source.Vector({
   features: [marker]

@@ -7,6 +7,6 @@ var map = new ol.Map({
         ],
         view: new ol.View({
           center: ol.proj.fromLonLat([20.019056, -33.600791]), // Coordinates of New York
-          zoom: 7 //Initial Zoom Level
+          zoom: 8 //Initial Zoom Level
         })
       });

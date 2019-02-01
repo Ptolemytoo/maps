@@ -15,8 +15,17 @@ var map = new ol.Map({
 var marker = new ol.Feature({
   geometry: new ol.geom.Point(
     ol.proj.fromLonLat([20.581563413143158,-33.23120285756886])
-  ),  // Cordinates of Matjiesfontein
+  ),  // Coordinates of Matjiesfontein
 });
+
+marker.setStyle(new ol.style.Style({
+  image: new ol.style.Icon( ({
+    color: '#ffcd46',
+    crossOrigin: 'anonymous',
+    src: 'dot.png'
+  }))
+}));
+
 var vectorSource = new ol.source.Vector({
   features: [marker]
 });

@@ -6,7 +6,21 @@ var map = new ol.Map({
           })
         ],
         view: new ol.View({
-          center: ol.proj.fromLonLat([20.019056, -33.600791]), // Coordinates of New York
+          center: ol.proj.fromLonLat([20.019056, -33.600791]), // Coordinates of Western Cape Province, South Africa
           zoom: 8 //Initial Zoom Level
         })
       });
+
+//Adding a marker on the map
+var marker = new ol.Feature({
+  geometry: new ol.geom.Point(
+    ol.proj.fromLonLat([20.581563413143158,-33.23120285756886])
+  ),  // Cordinates of Matjiesfontein
+});
+var vectorSource = new ol.source.Vector({
+  features: [marker]
+});
+var markerVectorLayer = new ol.layer.Vector({
+  source: vectorSource,
+});
+map.addLayer(markerVectorLayer);
